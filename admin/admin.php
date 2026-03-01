@@ -36,7 +36,7 @@ $total_records = mysqli_fetch_assoc($count_result)['total'];
 $total_pages = ceil($total_records / $limit);
 
 //untuk deteksi online berdasarkan session
-$sql = "SELECT id, email, username, verifikasi, foto_profil, session_id 
+$sql = "SELECT id, email, username, verifikasi, foto_profil, session_id
         FROM admin $where_clause ORDER BY id ASC LIMIT ? OFFSET ?";
 $stmt = mysqli_prepare($conn, $sql);
 
